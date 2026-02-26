@@ -2,4 +2,5 @@
 
 Guía para avanzar:
 
-1. Factores en R con forcats
+0. Spss labels.
+1. Factores en R con forcats.

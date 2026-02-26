@@ -37,12 +37,12 @@ Objetivos de hoy:
 9. Usar github (manual en Grok).
 
 10. Análisis de datos bivariados:
-        * loess
+    * loess
 
 11. Manejar con dplyr la librería stats:
-        * pairwise.prop.test
-        * interaction.plot        
-        * kruskal.test                
-        * oneway.test
-        * bartlett.test
-        * chisq.test
+    * pairwise.prop.test
+    * interaction.plot        
+    * kruskal.test                
+    * oneway.test
+    * bartlett.test
+    * chisq.test

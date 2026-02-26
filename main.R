@@ -3,6 +3,7 @@ library(tidyverse)
 library(magrittr)
 library(ggplot2)
 library(gridExtra)
+library(haven)
 library(expss)
 library(ggdark)
 library(lubridate)
@@ -10,7 +11,6 @@ library(DBI)
 library(RMySQL)
 library(sf)
 library(terra)
-library(haven)
 library(rio)
 library(broom)
 library(pacman)
@@ -55,7 +55,7 @@ dir("./Databases")
 
 system("git add .")
 system("git status")
-system("git commit -m 'Update_5'")
+system("git commit -m 'Update_6'")
 system("git log")
 system("git push repos master")
 
@@ -71,6 +71,57 @@ dir()
 
 d <- mpg
 d %>% str()
-d$year %<>% as.factor
 d %>% count(drv)
-d$drv %<>% as.factor
+
+library(haven)
+library(expss)
+
+spss_data <-
+  haven::read_spss(
+    file.path(
+      "D:\\BackUp Desktop -Abril25\\Documents\\2025\\03Mar\\",
+      "d26\\R_Test\\R_Join_II\\Files\\Capítulo_I_NACIONAL.sav"
+    )
+  )
+
+spss_data %>%
+  str() %>%
+  capture.output() %>%
+  writeLines("str_s.txt")
+
+spss_data_labels <- add_labelled_class(spss_data)
+
+spss_data_labels %>%
+  str() %>%
+  capture.output() %>%
+  writeLines("str_sl.txt")
+
+s <- spss_data
+sl <- spss_data_labels
+
+s %>%
+  colnames() %>%
+  matrix()
+sl %>%
+  colnames() %>%
+  matrix()
+
+s %>% count(DEPARTAMENTO)
+sl %>% count(DEPARTAMENTO)
+
+attributes(s$DEPARTAMENTO)
+attributes(sl$DEPARTAMENTO)
+
+sl$TIPO_VIA
+
+nps <- c(-1, 0, 1, 1, 0, 1, 1, -1)
+var_lab(nps) <- "Net promoter score"
+val_lab(nps) <- num_lab("
+            -1 Detractors
+             0 Neutralists
+             1 Promoters
+             2 NS/NC
+")
+
+nps %>% class()
+nps_f <- nps %>% as.factor()

@@ -1,0 +1,85 @@
+tibble [2,612 x 21] (S3: tbl_df/tbl/data.frame)
+ $ ID          : chr [1:2612] "0001" "0002" "0005-A" "0005" ...
+  ..- attr(*, "format.spss")= chr "A6"
+  ..- attr(*, "display_width")= int 9
+ $ CCDD        :Class 'labelled' chr [1:2612] "01" "01" "01" "01" ...
+  ..- attr(*, "format.spss")= chr "A2"
+  ..- attr(*, "display_width")= int 4
+   .. .. LABEL: CCDD.Código de Departamento 
+ $ DEPARTAMENTO:Class 'labelled' chr [1:2612] "AMAZONAS" "AMAZONAS" "AMAZONAS" "AMAZONAS" ...
+  ..- attr(*, "format.spss")= chr "A13"
+  ..- attr(*, "display_width")= int 11
+   .. .. LABEL: DEPARTAMENTO.Nombre de Departamento 
+ $ CCPP        :Class 'labelled' chr [1:2612] "02" "02" "02" "02" ...
+  ..- attr(*, "format.spss")= chr "A2"
+  ..- attr(*, "display_width")= int 4
+   .. .. LABEL: CCPP.Código de Provincia 
+ $ PROVINCIA   :Class 'labelled' chr [1:2612] "BAGUA" "BAGUA" "BAGUA" "BAGUA" ...
+  ..- attr(*, "format.spss")= chr "A25"
+  ..- attr(*, "display_width")= int 9
+   .. .. LABEL: PROVINCIA.Nombre de Provincia 
+ $ CCDI        :Class 'labelled' chr [1:2612] "02" "01" "05" "05" ...
+  ..- attr(*, "format.spss")= chr "A2"
+  ..- attr(*, "display_width")= int 4
+   .. .. LABEL: CCDI.Código de Distrito 
+ $ DISTRITO    :Class 'labelled' chr [1:2612] "ARAMANGO" "BAGUA" "IMAZA" "IMAZA" ...
+  ..- attr(*, "format.spss")= chr "A36"
+  ..- attr(*, "display_width")= int 14
+   .. .. LABEL: DISTRITO.Nombre de Distrito 
+ $ NO_DISPONE  :Class 'labelled' num [1:2612] 1 1 1 1 1 1 1 1 1 1 ...
+  ..- attr(*, "format.spss")= chr "F12.0"
+  ..- attr(*, "display_width")= int 9
+   .. .. LABEL: NO_DISPONE.No Dispone de Mercado de Abastos 
+ $ GPS_LON     :Class 'labelled' chr [1:2612] "-78,43725" "-78,436642" "-78,537126" "-78,288595" ...
+  ..- attr(*, "format.spss")= chr "A20"
+  ..- attr(*, "display_width")= int 12
+   .. .. LABEL: GPS_LON.Punto GPS - LONGITUD 
+ $ GPS_LAT     :Class 'labelled' chr [1:2612] "-5,417803" "-5,610554" "-5,639338" "-5,162497" ...
+  ..- attr(*, "format.spss")= chr "A20"
+  ..- attr(*, "display_width")= int 10
+   .. .. LABEL: GPS_LAT.Punto GPS - LATITUD 
+ $ GPS_ALT     :Class 'labelled' chr [1:2612] "471,622314" "881,924561" "485" "315,996948" ...
+  ..- attr(*, "format.spss")= chr "A20"
+  ..- attr(*, "display_width")= int 9
+   .. .. LABEL: GPS_ALT.Punto GPS - ALTITUD 
+ $ TIPO_VIA    :Class 'labelled' num [1:2612] 3 3 1 1 3 3 1 1 3 3 ...
+  ..- attr(*, "format.spss")= chr "F12.0"
+  ..- attr(*, "display_width")= int 7
+   .. .. LABEL: TIPO_VIA.Tipo de vía 
+   .. .. VALUE LABELS [1:7]: 1=Avenida, 2=Calle, 3=Jirón, 4=Pasaje, 5=Carretera, 6=Prolongación, 7=Otro 
+ $ NOM_VIA     :Class 'labelled' chr [1:2612] "CEDRON" "CHACHAPOYAS" "MARAÑON" "LAS PALMERAS" ...
+  ..- attr(*, "format.spss")= chr "A94"
+  ..- attr(*, "display_width")= int 22
+   .. .. LABEL: NOM_VIA.Nombre de vía 
+ $ NRO_PUERTA  :Class 'labelled' chr [1:2612] "SN" "SN" "SN" "SN" ...
+  ..- attr(*, "format.spss")= chr "A4"
+  ..- attr(*, "display_width")= int 3
+   .. .. LABEL: NRO_PUERTA.Nº de Puerta 
+ $ BLOCK       :Class 'labelled' chr [1:2612] "0" "" "0" "0" ...
+  ..- attr(*, "format.spss")= chr "A3"
+  ..- attr(*, "display_width")= int 2
+   .. .. LABEL: BLOCK.Block 
+ $ INTERIOR    :Class 'labelled' chr [1:2612] "0" "" "0" "0" ...
+  ..- attr(*, "format.spss")= chr "A3"
+  ..- attr(*, "display_width")= int 3
+   .. .. LABEL: INTERIOR. Interior 
+ $ PISO        :Class 'labelled' num [1:2612] 1 1 2 1 1 1 1 1 1 1 ...
+  ..- attr(*, "format.spss")= chr "F12.0"
+  ..- attr(*, "display_width")= int 3
+   .. .. LABEL: PISO.Dirección - Piso 
+ $ MZ          :Class 'labelled' chr [1:2612] "" "" "" "0" ...
+  ..- attr(*, "format.spss")= chr "A6"
+  ..- attr(*, "display_width")= int 2
+   .. .. LABEL: MZ.Manzana 
+ $ LOTE        :Class 'labelled' chr [1:2612] "0" "" "0" "0" ...
+  ..- attr(*, "format.spss")= chr "A5"
+  ..- attr(*, "display_width")= int 3
+   .. .. LABEL: LOTE.Lote 
+ $ KM          :Class 'labelled' chr [1:2612] "0" "" "0" "0" ...
+  ..- attr(*, "format.spss")= chr "A18"
+  ..- attr(*, "display_width")= int 3
+   .. .. LABEL: KM.Km 
+ $ REFERENCIA  :Class 'labelled' chr [1:2612] "A DOS CUADRAS DE LA PLAZA DE ARMAS DE ARAMANGO" "ESQUINA JIRONN CHACHAPOYAS CON JIRON TRUJILLO" "AL FRENTE DE LA PLAZA PRINCIPAL DE IMAZITA" "A MEDIA CUADRA DE LA PLAZA DE ARMAS DE CHIRIACO" ...
+  ..- attr(*, "format.spss")= chr "A60"
+  ..- attr(*, "display_width")= int 17
+   .. .. LABEL: REFERENCIA.Referencia para la ubicación del mercado 

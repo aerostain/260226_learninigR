@@ -1,0 +1,86 @@
+tibble [2,612 x 21] (S3: tbl_df/tbl/data.frame)
+ $ ID          : chr [1:2612] "0001" "0002" "0005-A" "0005" ...
+  ..- attr(*, "format.spss")= chr "A6"
+  ..- attr(*, "display_width")= int 9
+ $ CCDD        : chr [1:2612] "01" "01" "01" "01" ...
+  ..- attr(*, "label")= chr "CCDD.Código de Departamento"
+  ..- attr(*, "format.spss")= chr "A2"
+  ..- attr(*, "display_width")= int 4
+ $ DEPARTAMENTO: chr [1:2612] "AMAZONAS" "AMAZONAS" "AMAZONAS" "AMAZONAS" ...
+  ..- attr(*, "label")= chr "DEPARTAMENTO.Nombre de Departamento"
+  ..- attr(*, "format.spss")= chr "A13"
+  ..- attr(*, "display_width")= int 11
+ $ CCPP        : chr [1:2612] "02" "02" "02" "02" ...
+  ..- attr(*, "label")= chr "CCPP.Código de Provincia"
+  ..- attr(*, "format.spss")= chr "A2"
+  ..- attr(*, "display_width")= int 4
+ $ PROVINCIA   : chr [1:2612] "BAGUA" "BAGUA" "BAGUA" "BAGUA" ...
+  ..- attr(*, "label")= chr "PROVINCIA.Nombre de Provincia"
+  ..- attr(*, "format.spss")= chr "A25"
+  ..- attr(*, "display_width")= int 9
+ $ CCDI        : chr [1:2612] "02" "01" "05" "05" ...
+  ..- attr(*, "label")= chr "CCDI.Código de Distrito"
+  ..- attr(*, "format.spss")= chr "A2"
+  ..- attr(*, "display_width")= int 4
+ $ DISTRITO    : chr [1:2612] "ARAMANGO" "BAGUA" "IMAZA" "IMAZA" ...
+  ..- attr(*, "label")= chr "DISTRITO.Nombre de Distrito"
+  ..- attr(*, "format.spss")= chr "A36"
+  ..- attr(*, "display_width")= int 14
+ $ NO_DISPONE  : num [1:2612] 1 1 1 1 1 1 1 1 1 1 ...
+  ..- attr(*, "label")= chr "NO_DISPONE.No Dispone de Mercado de Abastos"
+  ..- attr(*, "format.spss")= chr "F12.0"
+  ..- attr(*, "display_width")= int 9
+ $ GPS_LON     : chr [1:2612] "-78,43725" "-78,436642" "-78,537126" "-78,288595" ...
+  ..- attr(*, "label")= chr "GPS_LON.Punto GPS - LONGITUD"
+  ..- attr(*, "format.spss")= chr "A20"
+  ..- attr(*, "display_width")= int 12
+ $ GPS_LAT     : chr [1:2612] "-5,417803" "-5,610554" "-5,639338" "-5,162497" ...
+  ..- attr(*, "label")= chr "GPS_LAT.Punto GPS - LATITUD"
+  ..- attr(*, "format.spss")= chr "A20"
+  ..- attr(*, "display_width")= int 10
+ $ GPS_ALT     : chr [1:2612] "471,622314" "881,924561" "485" "315,996948" ...
+  ..- attr(*, "label")= chr "GPS_ALT.Punto GPS - ALTITUD"
+  ..- attr(*, "format.spss")= chr "A20"
+  ..- attr(*, "display_width")= int 9
+ $ TIPO_VIA    : dbl+lbl [1:2612] 3, 3, 1, 1, 3, 3, 1, 1, 3, 3, 5, 3, 7, 1, 1, 3, 1, 1, 1, 1, 3, 1, 4, 3, 1, 3, 3, 3, ...
+   ..@ label        : chr "TIPO_VIA.Tipo de vía"
+   ..@ format.spss  : chr "F12.0"
+   ..@ display_width: int 7
+   ..@ labels       : Named num [1:7] 1 2 3 4 5 6 7
+   .. ..- attr(*, "names")= chr [1:7] "Avenida" "Calle" "Jirón" "Pasaje" ...
+ $ NOM_VIA     : chr [1:2612] "CEDRON" "CHACHAPOYAS" "MARAÑON" "LAS PALMERAS" ...
+  ..- attr(*, "label")= chr "NOM_VIA.Nombre de vía"
+  ..- attr(*, "format.spss")= chr "A94"
+  ..- attr(*, "display_width")= int 22
+ $ NRO_PUERTA  : chr [1:2612] "SN" "SN" "SN" "SN" ...
+  ..- attr(*, "label")= chr "NRO_PUERTA.Nº de Puerta"
+  ..- attr(*, "format.spss")= chr "A4"
+  ..- attr(*, "display_width")= int 3
+ $ BLOCK       : chr [1:2612] "0" "" "0" "0" ...
+  ..- attr(*, "label")= chr "BLOCK.Block"
+  ..- attr(*, "format.spss")= chr "A3"
+  ..- attr(*, "display_width")= int 2
+ $ INTERIOR    : chr [1:2612] "0" "" "0" "0" ...
+  ..- attr(*, "label")= chr "INTERIOR. Interior"
+  ..- attr(*, "format.spss")= chr "A3"
+  ..- attr(*, "display_width")= int 3
+ $ PISO        : num [1:2612] 1 1 2 1 1 1 1 1 1 1 ...
+  ..- attr(*, "label")= chr "PISO.Dirección - Piso"
+  ..- attr(*, "format.spss")= chr "F12.0"
+  ..- attr(*, "display_width")= int 3
+ $ MZ          : chr [1:2612] "" "" "" "0" ...
+  ..- attr(*, "label")= chr "MZ.Manzana"
+  ..- attr(*, "format.spss")= chr "A6"
+  ..- attr(*, "display_width")= int 2
+ $ LOTE        : chr [1:2612] "0" "" "0" "0" ...
+  ..- attr(*, "label")= chr "LOTE.Lote"
+  ..- attr(*, "format.spss")= chr "A5"
+  ..- attr(*, "display_width")= int 3
+ $ KM          : chr [1:2612] "0" "" "0" "0" ...
+  ..- attr(*, "label")= chr "KM.Km"
+  ..- attr(*, "format.spss")= chr "A18"
+  ..- attr(*, "display_width")= int 3
+ $ REFERENCIA  : chr [1:2612] "A DOS CUADRAS DE LA PLAZA DE ARMAS DE ARAMANGO" "ESQUINA JIRONN CHACHAPOYAS CON JIRON TRUJILLO" "AL FRENTE DE LA PLAZA PRINCIPAL DE IMAZITA" "A MEDIA CUADRA DE LA PLAZA DE ARMAS DE CHIRIACO" ...
+  ..- attr(*, "label")= chr "REFERENCIA.Referencia para la ubicación del mercado"
+  ..- attr(*, "format.spss")= chr "A60"
+  ..- attr(*, "display_width")= int 17
