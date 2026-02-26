@@ -1,7 +1,13 @@
 # Léeme
 Desde hoy debo confiar más y meojorar de a poco, sí es posible!.
 
+> Recuerda que todo el mundo esta todo el tiempo trtando de ser un poco mejor cada día. Y pensar que lo están logrando, a cualquiera, lo alegra.
+
 > No olvides escribir alegremente, solo tu puedes hacerlo!.
+
+> Como no estás experimentado en las cosas del mundo, todas las cosas que tienen algo de dificultad te parecen imposibles. Confía en el tiempo, que suele dar dulces salidas a muchas amargas dificultades. - El Quijote.
+
+> Recuerda ir de a pocos y no ser muy exigente, todavía estas aprendiendo. No desesperes que la marea puede cambiar en el minuto menos esperado y solo los experimentados saben como ganarle al mar porque ya lo conocieron muchas veces antes.
 
 ## Día 26/02/26
 
@@ -15,5 +21,5 @@ Objetivos de hoy:
 
 2. Crear un compilado de información llamado: "Mis avances en conocimiento estadístico" con su propio github y usar formato APA (para practicar y porque es útil), formato html.
 
-> Recuerda ir de a pocos y no ser muy exigente, todavía estas aprendiendo. No desesperes que la marea puede cambiar en el minuto menos esperado y solo los experimentados saben como ganarle al mar porque ya lo conocieron muchas veces antes.
-
+3. No olvides:
+    * Usar formatos Spss: `apply_labels`.

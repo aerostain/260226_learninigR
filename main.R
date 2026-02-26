@@ -46,5 +46,15 @@ file.create("Readme.md")
 unlink("Informe.qmd", recursive = TRUE)
 
 # ---------------------------------------------------------------------
-#
+# Controles básicos
 # ---------------------------------------------------------------------
+
+dir()
+getwd()
+dir("./Databases")
+
+system("git add .")
+system("git status")
+system("git log")
+system("git commit -m 'update_1'")
+system("git push repos master")
