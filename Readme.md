@@ -1,5 +1,5 @@
 # Léeme
-Desde hoy debo confiar más y meojorar de a poco, sí es posible!.
+Desde hoy debo confiar más y mejorar de a poco, sí es posible!.
 
 > Recuerda que todo el mundo esta todo el tiempo trtando de ser un poco mejor cada día. Y pensar que lo están logrando, a cualquiera, lo alegra.
 
@@ -23,3 +23,13 @@ Objetivos de hoy:
 
 3. No olvides:
     * Usar formatos Spss: `apply_labels`.
+
+4. Pruebas No Paramétricas data continua.
+
+5. Pruebas Chi-squared para tablas 2 y 3 niveles.
+
+6. Redes, arboles, k-means.
+
+7. Logit.
+
+8. Hacer una librería en R con mis funciones de resumen.

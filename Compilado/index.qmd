@@ -1,0 +1,23 @@
+---
+title: "Compilado investigacion estadística"
+author: "Ricardo Márquez Salazar"
+bibliography: referencias.bib
+csl: apa.csl
+lang: es
+---
+
+\newpage
+
+## Citas útiles 
+
+* Según @gemini260226_quarto01, este es el formato que debo seguir para organizar mis archivos:
+
+## Código R útil
+
+* across en dplyr
+
+\newpage
+
+### Referencias
+::: {#refs}
+:::

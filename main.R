@@ -55,6 +55,22 @@ dir("./Databases")
 
 system("git add .")
 system("git status")
+system("git commit -m 'update_2'")
 system("git log")
-system("git commit -m 'update_1'")
 system("git push repos master")
+
+system("dir")
+
+dir.create("Compilado")
+dir()
+
+
+# ---------------------------------------------------------------------
+# Repaso
+# ---------------------------------------------------------------------
+
+d <- mpg
+d %>% str()
+d$year %<>% as.factor
+d %>% count(drv)
+d$drv %<>% as.factor
