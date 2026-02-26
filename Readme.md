@@ -33,3 +33,16 @@ Objetivos de hoy:
 7. Logit.
 
 8. Hacer una librería en R con mis funciones de resumen.
+
+9. Usar github (manual en Grok).
+
+10. Análisis de datos bivariados:
+        * loess
+
+11. Manejar con dplyr la librería stats:
+        * pairwise.prop.test
+        * interaction.plot        
+        * kruskal.test                
+        * oneway.test
+        * bartlett.test
+        * chisq.test

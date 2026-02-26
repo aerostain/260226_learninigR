@@ -4,19 +4,66 @@ author: "Ricardo Márquez Salazar"
 bibliography: referencias.bib
 csl: apa.csl
 lang: es
+format:
+  html:
+    toc: true
 ---
 
 \newpage
 
 ## Citas útiles 
 
+### SPSS en R
+
+* Para aprender sobre etiquetas Spss en R: @spsslabels_01.
+
+Siempre usar al empezar:
+
+```cmd
+library(haven)
+library(expss)
+spss_data = haven::read_spss("spss_file.sav")
+# add missing 'labelled' class
+spss_data = add_labelled_class(spss_data)
+```
+
+* Para etiquetar corrrectamente, hacer tablas y gráficar usar @spsslabels_02.
+
+Recuerda usar factor para gráficar en ggplot.
+
+```r
+library(ggplot2)
+library(expss)
+# Convertimos las etiquetas de valor en factores de R
+# Esto hace que el "1" se convierta en "Hombre" visualmente
+data_para_grafico = spss_data %>% 
+    mutate(
+        genero_factor = as_factor(genero),
+        satisfaccion_factor = as_factor(satisfaccion)
+    )
+```
+
+### Quarto
+
 * Según @gemini260226_quarto01, este es el formato que debo seguir para organizar mis archivos:
 
-## Código R útil
+## Código R
 
 * across en dplyr
 
+```r
+lm(dist ~ speed, cars)
+```
+
+## Codigo Github
+
 \newpage
+
+## Videos de Youtube
+
+### Citas para Programación de Sistemas
+
+* Motorola estuvo centrada en el hardware variandolo y basando su modelo de negocios en el exterior, con la llegada del Iphone el paradigma cambio y lo más importante se volvío el ecosistema (software y su logística) y ahí es donde esta el valor agregado. Motorola lo entendío y se enfocó en vigilancia de nicho (radio y camaras de policía,sistema 911, analisis de evidencia digital y almacenamiento, seguridad pública)[@informek_01].
 
 ### Referencias
 ::: {#refs}
