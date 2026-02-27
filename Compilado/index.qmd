@@ -15,6 +15,23 @@ format:
 
 ### SPSS en R
 
+* Debes saber que Spss en R no debería trabajar usando texto, sino todo en números, es por eso que etiquetarlo se hace tan necesario. Variables cuantitativas: numéricas y ordinales, incluso categoricas deben ser números con etiquetas.
+
+* Para tablas usar apply_labels() para modelamiento y ggplot usar as.factor(). Se deben tener 2 bases de datos.
+
+```r
+# Creamos una versión "lista para modelos"
+datos_modelo <- encuesta %>% 
+  mutate(across(where(is.labelled), as.factor))
+
+# Ahora la regresión es más limpia
+modelo_2 <- glm(satisfaccion ~ ingresos + region, 
+                data = datos_modelo, 
+                family = "binomial")
+
+summary(modelo_2)
+```
+
 * Para aprender sobre etiquetas Spss en R: @spsslabels_01.
 
 Siempre usar al empezar:
@@ -43,6 +60,8 @@ data_para_grafico = spss_data %>%
     )
 ```
 
+* Para más ejemplos de label con spss revisar la documentación de expss @spsslabels_03.
+
 ### Quarto
 
 * Según @gemini260226_quarto01, este es el formato que debo seguir para organizar mis archivos:
@@ -63,7 +82,7 @@ lm(dist ~ speed, cars)
 
 ### Citas para Programación de Sistemas
 
-* Motorola estuvo centrada en el hardware variandolo y basando su modelo de negocios en el exterior, con la llegada del Iphone el paradigma cambio y lo más importante se volvío el ecosistema (software y su logística) y ahí es donde esta el valor agregado. Motorola lo entendío y se enfocó en vigilancia de nicho (radio y camaras de policía,sistema 911, analisis de evidencia digital y almacenamiento, seguridad pública)[@informek_01].
+* Motorola estuvo centrada en el hardware, variandolo y basando su modelo de negocios en el exterior del dispositivo, con la llegada del Iphone el paradigma cambio y lo más importante se volvío el ecosistema (software y su logística) y ahí es donde está el valor agregado. Motorola lo entendío y se enfocó en vigilancia de nicho (radio y camaras de policía,sistema 911, análisis de evidencia digital y almacenamiento, seguridad pública)[@informek_01].
 
 ### Referencias
 ::: {#refs}
