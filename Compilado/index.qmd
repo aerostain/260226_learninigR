@@ -17,12 +17,12 @@ format:
 
 * Debes saber que Spss en R no debería trabajar usando texto, sino todo en números, es por eso que etiquetarlo se hace tan necesario. Variables cuantitativas: numéricas y ordinales, incluso categoricas deben ser números con etiquetas.
 
-* Para tablas usar apply_labels() para modelamiento y ggplot usar as.factor(). Se deben tener 2 bases de datos.
+* Para tablas usar apply_labels() para modelamiento y ggplot usar as.factor(). Se deben tener 2 bases de datos [@spsslabels_04].
 
 ```r
 # Creamos una versión "lista para modelos"
 datos_modelo <- encuesta %>% 
-  mutate(across(where(is.labelled), as.factor))
+  mutate(across(where(expss::is.labelled), as.factor))
 
 # Ahora la regresión es más limpia
 modelo_2 <- glm(satisfaccion ~ ingresos + region, 

@@ -424,3 +424,95 @@ x %>%
   mutate(dist = 99)
 
 file.create("test.R")
+
+set.seed(123)
+df <- data.frame(
+  id = 1:100,
+  satisfaccion = sample(1:2, 100, replace = TRUE),
+  region = sample(1:3, 100, replace = TRUE),
+  ingresos = rnorm(100, 500, 100)
+)
+
+df %>% head()
+df %>% str()
+df$satisfaccion
+df$region
+
+df <- df %>%
+  apply_labels(
+    satisfaccion = "Nivel de Satisfacción",
+    satisfaccion = c("Insatisfecho" = 1, "Satisfecho" = 2),
+    region = "Zona Geográfica",
+    region = c("Norte" = 1, "Centro" = 2, "Sur" = 3),
+    ingresos = "Ingreso Mensual (USD)"
+  )
+
+tabla_resumen <- df %>%
+  tab_cells(satisfaccion) %>%
+  tab_cols(total(), region) %>%
+  tab_stat_cpct() %>%
+  tab_pivot()
+
+print("--- TABLA DE CONTINGENCIA ---")
+print(tabla_resumen)
+
+modelo_log <- glm(as.factor(satisfaccion) ~ ingresos + as.factor(region),
+  data = df,
+  family = "binomial"
+)
+
+print("--- RESUMEN DEL MODELO ---")
+summary(modelo_log)
+
+df2 <- df %>% mutate(across(where(is.labelled), as.factor))
+df2 %>% str()
+df %>% str()
+
+df$region %>% is.labelled()
+
+df2 <- df %>%
+  mutate(across(c(satisfaccion, region), as.factor))
+
+encuesta <- data.frame(
+  id = 1:100,
+  satisfaccion = sample(1:2, 100, replace = TRUE),
+  region = sample(1:3, 100, replace = TRUE),
+  ingresos = rnorm(100, 500, 100)
+)
+
+encuesta <- encuesta %>%
+  apply_labels(
+    satisfaccion = "Nivel de Satisfacción",
+    satisfaccion = c("Insatisfecho" = 1, "Satisfecho" = 2),
+    region = "Zona Geográfica",
+    region = c("Norte" = 1, "Centro" = 2, "Sur" = 3),
+    ingresos = "Ingreso Mensual"
+  )
+
+encuesta %>% str()
+
+
+encuesta %>%
+  select(where()) %>%
+  str()
+
+e2 %>%
+  mutate(across(where(is.factor), as.labelled)) %>%
+  str()
+
+e2 %>% str()
+encuesta %>% str()
+encuesta$region %>% val_lab()
+encuesta$id %>% val_lab()
+
+x <- sapply(encuesta, val_lab) %>%
+  lapply(is.null) %>%
+  unlist()
+
+encuesta %>%
+  sapply(val_lab) %>%
+  lapply(is.null) %>%
+  unlist() -> x
+
+encuesta[, !x] %<>% mutate(across(where(expss::is.labelled), as.factor))
+encuesta %>% str()

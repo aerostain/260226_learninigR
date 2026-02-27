@@ -150,11 +150,11 @@ div.csl-indent {
 <h3 class="anchored" data-anchor-id="spss-en-r">SPSS en R</h3>
 <ul>
 <li><p>Debes saber que Spss en R no debería trabajar usando texto, sino todo en números, es por eso que etiquetarlo se hace tan necesario. Variables cuantitativas: numéricas y ordinales, incluso categoricas deben ser números con etiquetas.</p></li>
-<li><p>Para tablas usar apply_labels() para modelamiento y ggplot usar as.factor(). Se deben tener 2 bases de datos.</p></li>
+<li><p>Para tablas usar apply_labels() para modelamiento y ggplot usar as.factor(). Se deben tener 2 bases de datos <span class="citation" data-cites="spsslabels_04">(<a href="#ref-spsslabels_04" role="doc-biblioref"><em>Cuando elegir apply_labels vs. as.factor</em>, 2026</a>)</span>.</p></li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos una versión "lista para modelos"</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>datos_modelo <span class="ot">&lt;-</span> encuesta <span class="sc">%&gt;%</span> </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.labelled), as.factor))</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(expss<span class="sc">::</span>is.labelled), as.factor))</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ahora la regresión es más limpia</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>modelo_2 <span class="ot">&lt;-</span> <span class="fu">glm</span>(satisfaccion <span class="sc">~</span> ingresos <span class="sc">+</span> region, </span>
@@ -217,6 +217,9 @@ div.csl-indent {
 <section id="referencias" class="level3">
 <h3 class="anchored" data-anchor-id="referencias">Referencias</h3>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-spsslabels_04" class="csl-entry" role="listitem">
+<em>Cuando elegir apply_labels vs. as.factor</em>. (2026). <a href="https://gemini.google.com/app/c7ddcfe6c41c9e81?hl=es">https://gemini.google.com/app/c7ddcfe6c41c9e81?hl=es</a>
+</div>
 <div id="ref-spsslabels_01" class="csl-entry" role="listitem">
 Demin, G. (2025). <em>Variable and value labels support in base R and other packages</em>. <a href="https://cran.r-project.org/web/packages/expss/vignettes/labels-support.html">https://cran.r-project.org/web/packages/expss/vignettes/labels-support.html</a>
 </div>
